@@ -1,0 +1,103 @@
+@baseURL=http://localhost:3000
+@accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTg4NzUxMDAsImV4cCI6MTc1ODg3ODcwMH0.AKDWDOCQXBfBejWDyImmnZfw8ui8iAcpN2bkeZJcT8E
+### 
+GET {{baseURL}}/teams
+Authorization: Bearer {{accessToken}}
+
+### 
+GET {{baseURL}}/teams/3
+Authorization: Bearer {{accessToken}}
+
+###
+POST {{baseURL}}/teams
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
+
+{
+  "name": "test2",
+  "description": "La vrai meilleur équipe !"
+}
+
+###
+PATCH {{baseURL}}/teams/2
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
+
+{
+  "name": "testUpdated",
+  "description": "La vrai meilleur équipe !"
+}
+###
+PUT {{baseURL}}/teams/4/poke/4
+Authorization: Bearer {{accessToken}} 
+
+###
+DELETE {{baseURL}}/teams/4/poke/1
+Authorization: Bearer {{accessToken}}
+
+###
+DELETE {{baseURL}}/teams/3
+Authorization: Bearer {{accessToken}}
+
+### 
+GET {{baseURL}}/pokemons
+Authorization: Bearer {{accessToken}}
+
+### 
+GET {{baseURL}}/pokemons/1
+Authorization: Bearer {{accessToken}}
+
+###
+GET {{baseURL}}/pokemons/1/2
+Authorization: Bearer {{accessToken}}
+
+###
+
+GET {{baseURL}}/pokemons/name/Carapuce
+Authorization: Bearer {{accessToken}}
+###
+
+POST {{baseURL}}/pokemons/79/vote
+Authorization: Bearer {{accessToken}}
+###
+
+
+POST {{baseURL}}/pokemons/78/voteNumber
+Authorization: Bearer {{accessToken}}
+###
+
+GET {{baseURL}}/pokemons/top
+Authorization: Bearer {{accessToken}}
+###
+
+GET {{baseURL}}/type
+Authorization: Bearer {{accessToken}}
+
+### 
+GET {{baseURL}}/type/2
+Authorization: Bearer {{accessToken}}
+
+###
+
+### POST /auth/register
+POST {{baseURL}}/auth/register
+Content-Type: application/json
+
+{
+  "username": "Yann",
+  "password": "Passw0rd",
+  "confirm": "Passw0rd"
+}
+
+### POST /auth/login
+POST {{baseURL}}/auth/login
+Content-Type: application/json
+
+{
+  "username": "user1",
+  "password": "Passw0rd"
+}
+
+### GET /auth/me
+GET {{baseURL}}/auth/me
+Authorization: Bearer {{accessToken}}
