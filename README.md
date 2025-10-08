@@ -13,7 +13,7 @@ Elle permet de gérer des Pokémons, leurs types, des équipes et des utilisateu
 Clonez le dépôt et installez les dépendances :
 
 ```bash
-git clone https://github.com/YannMOTTOLA/Opokedex.git
+git clone git@github.com:YannMOTTOLA/OPokedex.git
 cd Opokedex/api
 npm install
 ```
